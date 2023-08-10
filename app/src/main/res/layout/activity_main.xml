@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/containerSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@color/backgroundTopColor"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculadora IMC"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/containerForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label_form_start"
+                    android:text="Peso (kg)" />
+
+                <TextView
+                    style="@style/label_form_end"
+                    android:text="Altura (m)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPeso"
+                    style="@style/input_form_start"
+                    android:hint="@string/hint_peso"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/etAltura"
+                    style="@style/input_form_end"
+                    android:hint="@string/hint_altura"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btCalcular"
+                style="@style/button"
+                android:text="@string/calcular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerInferior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@color/backgroundBottomColor"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvIMC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seu indice é"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/ivIMCStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvIMCStatus"
+            android:layout_below="@+id/tvIMC"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/masc_abaixo" />
+
+        <TextView
+            android:id="@+id/tvIMCStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="Peso ideal"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
